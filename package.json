@@ -1,0 +1,14 @@
+{
+  "name": "skg-photography",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.0.0rc4",
+    "ejs": "*"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm":  "1.1.x"
+  },
+  "author": "Michael Huneke <mike@patternconsulting.com> (http://www.patternconsulting.com)",
+  "main": "server.js"
+}
