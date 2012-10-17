@@ -8,11 +8,15 @@ var path = require('path');
 var app = express();
 
 app.configure(function() {
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.PORT || 3001);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(app.router);
   app.use(express['static'](path.join(__dirname, 'public')));
+});
+
+app.get('/', function(req, res) {
+  res.render('index');
 });
 
 app.listen(app.get('port'), function(){
