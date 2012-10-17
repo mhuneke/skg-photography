@@ -1,0 +1,12 @@
+<h2 ng-cloak>{{currentImageTitle}}</h2>
+<div id="collection-image-preview" style="height: 700px;">
+
+</div>
+
+<footer>
+  <div class="container">
+    <a ng-click="previousImage();" ng-disabled="currentImageIndex == 0"><i class="icon-arrow-left icon-white"></i> Previous</a>
+    <span ng-cloak style="padding-left: 10px; padding-right: 10px;">{{currentImageIndex + 1}} of {{photoUrls.length}}</span>
+    <a ng-disabled="currentImageIndex == photoUrls.length - 1" ng-click="nextImage();">Next <i class="icon-arrow-right icon-white"></i></a>
+  </div>
+</footer>

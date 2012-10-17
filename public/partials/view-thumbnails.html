@@ -1,0 +1,11 @@
+<div id="thumbnail-container">
+  <div ng-repeat="collection in collections">
+    <h4 ng-cloak>{{collection.title}}</h4>
+    <hr class="soften"/>
+    <div ng-repeat="photo in collection.photos" class="span3">
+      <a href="{{photo.url}}">
+        <img ng-src="{{photo.thumbnail}}"/>
+      </a>
+    </div>
+  </div>  
+</div>

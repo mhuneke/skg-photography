@@ -1,9 +1,56 @@
 body,html{
   height:100%;
 }
-body div#container {
+body #container .wrapper {
   height: 100%;
 }
-body div#container div {
+body #container .wrapper div {
   height: 100%;
+}
+
+#thumbnails-container {
+  margin-top: 30px;
+}
+
+footer {
+  color: #666;
+  background: #222;
+  padding: 17px 0 18px 0;
+  border-top: 1px solid #000;
+  position:fixed; bottom:0;
+  width: 100%;
+}
+footer a {
+  color: #999;
+}
+footer a:hover {
+  color: #efefef;
+}
+
+.wrapper > .container {
+  padding-top: 60px;
+}
+
+/* responsive footer fix by Aalaap Ghag */
+@media (max-width: 767px) {
+    body {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    footer, .wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -63px;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }

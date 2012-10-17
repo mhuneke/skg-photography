@@ -1,0 +1,29 @@
+{
+  "title": "Evergreen",
+  "photos": [
+    {
+      "title": "Pacific Cavern",
+      "url": "#/collection/evergreen/0",
+      "thumbnail": "/images/evergreen/thumbs/Pacific Cavern.jpg",
+      "image": "/images/evergreen/Pacific Cavern.jpg"
+    },
+    {
+      "title": "Dew",
+      "url": "#/collection/evergreen/1",
+      "thumbnail": "/images/evergreen/thumbs/Dew.jpg",
+      "image": "/images/evergreen/Dew.jpg"
+    },
+    {
+      "title": "Aspen, WA",
+      "url": "#/collection/evergreen/2",
+      "thumbnail": "/images/evergreen/thumbs/Aspen, WA.jpg",
+      "image": "/images/evergreen/Aspen, WA.jpg"
+    },
+    {
+      "title": "Avalon (1)",
+      "url": "#/collection/evergreen/3",
+      "thumbnail": "/images/evergreen/thumbs/Avalon (1).JPG",
+      "image": "/images/evergreen/Avalon (1).jpg"
+    }
+  ]
+}
