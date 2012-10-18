@@ -57,7 +57,7 @@
         return photo.image;
       });
 
-      $('#collection-image-preview').backstretch($scope.photoUrls, {fade: 500, duration: 4000});
+      $('#collection-image-preview').backstretch($scope.photoUrls, {fade: 500, duration: 4000, centeredX: false, centeredY: false});
       $('#collection-image-preview').data('backstretch').pause();
 
       $('#collection-image-preview').on("backstretch.show", function(event) {
