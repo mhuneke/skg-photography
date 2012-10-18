@@ -12,6 +12,10 @@ body #container .wrapper div {
   margin-top: 30px;
 }
 
+div.footer {
+  position:fixed; bottom:0;
+}
+
 footer {
   color: #666;
   background: #222;
@@ -31,17 +35,16 @@ footer a:hover {
   padding-top: 60px;
 }
 
-/* responsive footer fix by Aalaap Ghag */
 @media (max-width: 767px) {
-    body {
-      padding-right: 0;
-      padding-left: 0;
-    }
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
 
-    footer, .wrapper {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+  footer, .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .wrapper {
@@ -58,7 +61,6 @@ footer a:hover {
 [class*="thumbnail span"] {
   margin-left: 10px;
 }
-
 
 .pin {
   width: 170px;
