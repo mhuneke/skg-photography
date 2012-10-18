@@ -55,18 +55,37 @@
   controllers.controller('CollectionCtrl', ['$scope', '$routeParams', '$log', '$http', '$location', function($scope, $routeParams, $log, $http, $location) {
     $log.log($routeParams);
 
+    $scope.setImage = function() {
+      var $container = $("#preview-image-container");
+      var $image = $("#preview-image-container img");
+      
+      var createImage = function() {
+        $container.empty();
+        var $img = $('<img />')
+          .css("display", "none")
+          .bind('load', function (e) {
+            $img.fadeIn('fast');
+          })
+          .appendTo($container);
+
+        $img.attr('src', $scope.photoUrls[$scope.currentImageIndex]);
+      };
+
+      if ($image) {
+        $image.fadeOut('fast', createImage());
+      } else {
+        createImage();
+      }
+    };
+
     $http.get('/json/' + $routeParams.id + ".json").success(function(data) {
       $scope.collection = data;
       $scope.photoUrls = _.map($scope.collection.photos, function(photo) {
         return photo.image;
       });
 
-      $('#collection-image-preview').backstretch($scope.photoUrls, {fade: 500, duration: 4000, centeredX: false, centeredY: false});
-      $('#collection-image-preview').data('backstretch').pause();
-
       $('#collection-image-preview').on("backstretch.show", function(event) {
         if ($scope.slideshowPlaying) {
-          console.log($("#" + $(event.relatedTarget).attr("id") + " img"));
           var src = $("#" + $(event.relatedTarget).attr("id") + " img").attr("src");
           _.each($scope.photoUrls, function(photo, index) {
             if (photo === src) {
@@ -74,7 +93,6 @@
                 $scope.currentImageIndex = index;
               });
               
-              console.log("$scope.currentImageIndex = " + $scope.currentImageIndex);
               return;
             }
           });
@@ -82,11 +100,13 @@
       });
 
       $scope.$watch('currentImageIndex', function() {
-        $('#collection-image-preview').data('backstretch').show($scope.currentImageIndex);
         $scope.currentImageTitle = $scope.collection.photos[$scope.currentImageIndex].title;
+        $scope.setImage();
       });
 
       $scope.currentImageIndex = $routeParams.imageId ? parseInt($routeParams.imageId, 0) : 0;
+
+      $scope.currentImageSource = $scope.photoUrls[$scope.currentImageIndex];
     });
 
     $scope.nextImage = function() {
