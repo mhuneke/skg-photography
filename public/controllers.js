@@ -25,6 +25,9 @@
     bannerImages.push(url('/misc/seafoam.jpg'));
     bannerImages.push(url('/misc/Sunbeam.JPG'));
     bannerImages.push(url('/misc/Untitled.jpg'));
+    bannerImages.push(url('/misc/Morning chalk.jpg'));
+    bannerImages.push(url('/misc/Gooey.jpg'));
+    bannerImages.push(url('/misc/Levres et lumieres.jpg'));
 
     // Setup backstretch when you land
     setTimeout(function() {
