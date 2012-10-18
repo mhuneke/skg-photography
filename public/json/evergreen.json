@@ -1,27 +1,24 @@
 {
   "title": "Evergreen",
+  "alias": "evergreen",
   "photos": [
     {
       "title": "Pacific Cavern",
-      "url": "#/collection/evergreen/0",
       "thumbnail": "/evergreen/thumbs/Pacific Cavern.jpg",
       "image": "/evergreen/Pacific Cavern.jpg"
     },
     {
       "title": "Dew",
-      "url": "#/collection/evergreen/1",
       "thumbnail": "/evergreen/thumbs/Dew.jpg",
       "image": "/evergreen/Dew.jpg"
     },
     {
       "title": "Aspen, WA",
-      "url": "#/collection/evergreen/2",
       "thumbnail": "/evergreen/thumbs/Aspen, WA.jpg",
       "image": "/evergreen/Aspen, WA.jpg"
     },
     {
       "title": "Avalon (1)",
-      "url": "#/collection/evergreen/3",
       "thumbnail": "/evergreen/thumbs/Avalon (1).jpg",
       "image": "/evergreen/Avalon (1).jpg"
     }

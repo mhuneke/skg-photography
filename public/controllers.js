@@ -1,4 +1,4 @@
-(function(angular, $, _) {
+(function(angular, $, _, setTimeout) {
   'use strict';
 
   var url = function(relativePath) {
@@ -46,7 +46,7 @@
 
     $scope.url = function(relativePath) {
       return url(relativePath);
-    }
+    };
   }]);
 
   controllers.controller('CollectionCtrl', ['$scope', '$routeParams', '$log', '$http', '$location', function($scope, $routeParams, $log, $http, $location) {
@@ -55,9 +55,6 @@
       $scope.collection = data;
       $scope.photoUrls = _.map($scope.collection.photos, function(photo) {
         return url(photo.image);
-      });
-      $scope.thumbnailUrls = _.map($scope.collection.photos, function(photo) {
-        return url(photo.thumbnail);
       });
 
       $('#collection-image-preview').backstretch($scope.photoUrls, {fade: 500, duration: 4000});
@@ -68,7 +65,7 @@
         $scope.currentImageTitle = $scope.collection.photos[$scope.currentImageIndex].title;
       });
 
-      $scope.currentImageIndex = $routeParams.imageId ? parseInt($routeParams.imageId) : 0;
+      $scope.currentImageIndex = $routeParams.imageId ? parseInt($routeParams.imageId, 0) : 0;
     });
 
     $scope.nextImage = function() {
@@ -97,4 +94,4 @@
       $scope.currentImageIndex = index;
     };
   }]);
-}(angular, $, _));
+}(angular, $, _, setTimeout));
