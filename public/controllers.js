@@ -28,6 +28,7 @@
     bannerImages.push(url('/misc/Morning chalk.jpg'));
     bannerImages.push(url('/misc/Gooey.jpg'));
     bannerImages.push(url('/misc/Levres et lumieres.jpg'));
+    bannerImages.push(url('/song-of-songs/Call to Prayer.JPG'));
 
     // Setup backstretch when you land
     setTimeout(function() {
