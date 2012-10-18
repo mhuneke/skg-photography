@@ -1,10 +1,6 @@
 (function(angular, $, _, setTimeout) {
   'use strict';
 
-  var url = function(relativePath) {
-    return "https://s3.amazonaws.com/skg-photography" + relativePath;
-  };
-
   var controllers = angular.module('app.controllers', []);
 
   controllers.controller('HomeCtrl', ['$scope', '$log', function($scope, $log) {
@@ -36,6 +32,10 @@
       $log.log(route);
       $scope.backstretch.destroy();
     });
+
+    $scope.url = function(relativePath) {
+      return url(relativePath);
+    };
   }]);
 
   controllers.controller('ThumbnailsCtrl', ['$scope', '$log', '$http', function($scope, $log, $http) {
@@ -43,22 +43,36 @@
     $http.get('/json/evergreen.json').success(function(data) {
       $scope.collections.push(data);
     });
-
-    $scope.url = function(relativePath) {
-      return url(relativePath);
-    };
   }]);
 
   controllers.controller('CollectionCtrl', ['$scope', '$routeParams', '$log', '$http', '$location', function($scope, $routeParams, $log, $http, $location) {
     $log.log($routeParams);
+
     $http.get('/json/' + $routeParams.id + ".json").success(function(data) {
       $scope.collection = data;
       $scope.photoUrls = _.map($scope.collection.photos, function(photo) {
-        return url(photo.image);
+        return photo.image;
       });
 
       $('#collection-image-preview').backstretch($scope.photoUrls, {fade: 500, duration: 4000});
       $('#collection-image-preview').data('backstretch').pause();
+
+      $('#collection-image-preview').on("backstretch.show", function(event) {
+        if ($scope.slideshowPlaying) {
+          console.log($("#" + $(event.relatedTarget).attr("id") + " img"));
+          var src = $("#" + $(event.relatedTarget).attr("id") + " img").attr("src");
+          _.each($scope.photoUrls, function(photo, index) {
+            if (photo === src) {
+              $scope.$apply(function() {
+                $scope.currentImageIndex = index;
+              });
+              
+              console.log("$scope.currentImageIndex = " + $scope.currentImageIndex);
+              return;
+            }
+          });
+        }
+      });
 
       $scope.$watch('currentImageIndex', function() {
         $('#collection-image-preview').data('backstretch').show($scope.currentImageIndex);
@@ -83,15 +97,13 @@
     };
 
     $scope.playSlideshow = function() {
+      $scope.slideshowPlaying = true;
       $('#collection-image-preview').data('backstretch').resume();
     };
 
     $scope.pauseSlideshow = function() {
+      $scope.slideshowPlaying = false;
       $('#collection-image-preview').data('backstretch').pause();
-    };
-
-    $scope.gotoImage = function(index) {
-      $scope.currentImageIndex = index;
     };
   }]);
 }(angular, $, _, setTimeout));

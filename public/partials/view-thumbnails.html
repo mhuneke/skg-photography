@@ -6,7 +6,7 @@
       <ul id="columns">
         <li class="pin thumbnail" ng-repeat="photo in collection.photos">
           <a ng-href="#/collection/{{collection.alias}}/{{$index}}">
-            <img ng-src="{{url(photo.thumbnail)}}"/>
+            <img ng-src="{{photo.thumbnail}}"/>
           </a>
         </li>
       </ul>
