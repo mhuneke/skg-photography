@@ -3,6 +3,10 @@
 
   var controllers = angular.module('app.controllers', []);
 
+  var url = function(relativePath) {
+    return "https://s3.amazonaws.com/skg-photography" + relativePath;
+  };
+
   controllers.controller('HomeCtrl', ['$scope', '$log', function($scope, $log) {
     var bannerImages = [];
     bannerImages.push(url('/evergreen/Muse of Avalon.jpg'));
@@ -32,16 +36,15 @@
       $log.log(route);
       $scope.backstretch.destroy();
     });
-
-    $scope.url = function(relativePath) {
-      return url(relativePath);
-    };
   }]);
 
   controllers.controller('ThumbnailsCtrl', ['$scope', '$log', '$http', function($scope, $log, $http) {
     $scope.collections = [];
-    $http.get('/json/evergreen.json').success(function(data) {
-      $scope.collections.push(data);
+    $scope.collectionAliases = ['evergreen', 'song-of-songs', 'portraits'];
+    _.each($scope.collectionAliases, function(alias) {
+      $http.get('/json/' + alias + '.json').success(function(data) {
+        $scope.collections.push(data);
+      });
     });
   }]);
 
