@@ -12,7 +12,7 @@
     bannerImages.push(url('/evergreen/Muse of Avalon.jpg'));
     bannerImages.push(url('/portraits/Chapeau.jpg'));
     bannerImages.push(url('/misc/Peonies.jpg'));
-    bannerImages.push(url('/evergreen/Astoria.jpg'));
+    bannerImages.push(url('/misc/Astoria.jpg'));
     bannerImages.push(url('/portraits/Violets are blue.jpg'));
     bannerImages.push(url('/misc/Golden Gate.JPG'));
     bannerImages.push(url('/song-of-songs/Hot landscape.JPG'));
