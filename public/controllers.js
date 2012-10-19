@@ -1,4 +1,4 @@
-(function(angular, $, _, setTimeout) {
+(function(angular, $, _, setTimeout, setInterval, clearInterval) {
   'use strict';
 
   var controllers = angular.module('app.controllers', []);
@@ -128,4 +128,4 @@
       clearInterval($scope.slideshowIntervalId);
     };
   }]);
-}(angular, $, _, setTimeout));
+}(angular, $, _, setTimeout, setInterval, clearInterval));
