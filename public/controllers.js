@@ -31,6 +31,7 @@
     bannerImages.push(url('/misc/Gooey.jpg'));
     bannerImages.push(url('/misc/Levres et lumieres.jpg'));
     bannerImages.push(url('/portraits/Orlene (2).jpg'));
+    bannerImages.push(url('/portraits/Bonnie Parkers.jpg'));
 
     // Setup backstretch when you land
     setTimeout(function() {
