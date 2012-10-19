@@ -19,6 +19,7 @@ body #container .wrapper div {
 
 div.footer {
   position:fixed; bottom:0;
+  margin-bottom: 10px;
 }
 
 footer {
