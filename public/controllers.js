@@ -7,6 +7,8 @@
     return "https://s3.amazonaws.com/skg-photography" + relativePath;
   };
 
+  var slideshowInterval = 4000;
+
   controllers.controller('HomeCtrl', ['$scope', '$log', function($scope, $log) {
     var bannerImages = [];
     bannerImages.push(url('/evergreen/Muse of Avalon.jpg'));
@@ -84,28 +86,12 @@
         return photo.image;
       });
 
-      $('#collection-image-preview').on("backstretch.show", function(event) {
-        if ($scope.slideshowPlaying) {
-          var src = $("#" + $(event.relatedTarget).attr("id") + " img").attr("src");
-          _.each($scope.photoUrls, function(photo, index) {
-            if (photo === src) {
-              $scope.$apply(function() {
-                $scope.currentImageIndex = index;
-              });
-              
-              return;
-            }
-          });
-        }
-      });
-
       $scope.$watch('currentImageIndex', function() {
         $scope.currentImageTitle = $scope.collection.photos[$scope.currentImageIndex].title;
         $scope.setImage();
       });
 
       $scope.currentImageIndex = $routeParams.imageId ? parseInt($routeParams.imageId, 0) : 0;
-
       $scope.currentImageSource = $scope.photoUrls[$scope.currentImageIndex];
     });
 
@@ -125,12 +111,21 @@
 
     $scope.playSlideshow = function() {
       $scope.slideshowPlaying = true;
-      $('#collection-image-preview').data('backstretch').resume();
+      $scope.slideshowIntervalId = setInterval(function() {
+        $scope.$apply(function() {
+          // reset the slideshow if at the end
+          if ($scope.currentImageIndex === $scope.photoUrls.length - 1) {
+            $scope.currentImageIndex = 0;
+          } else {
+            $scope.currentImageIndex++;
+          }
+        });
+      }, slideshowInterval);
     };
 
     $scope.pauseSlideshow = function() {
       $scope.slideshowPlaying = false;
-      $('#collection-image-preview').data('backstretch').pause();
+      clearInterval($scope.slideshowIntervalId);
     };
   }]);
 }(angular, $, _, setTimeout));
