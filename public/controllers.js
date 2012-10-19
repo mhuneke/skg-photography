@@ -19,7 +19,7 @@
     // bannerImages.push(url('/misc/Golden Gate.JPG'));
     bannerImages.push(url('/song-of-songs/Hot landscape.JPG'));
     bannerImages.push(url('/song-of-songs/Chameau rotant.JPG'));
-    bannerImages.push(url('/song-of-songs/Schawarma.JPG'));
+    bannerImages.push(url('/song-of-songs/Schawarma (1).JPG'));
     // bannerImages.push(url('/evergreen/Aspen, WA.jpg'));
     bannerImages.push(url('/evergreen/Dew.jpg'));
     bannerImages.push(url('/evergreen/Setting Forth, Forks.jpg'));
@@ -107,8 +107,10 @@
       if ($scope.currentImageIndex === 0) {
         return;
       }
-      $scope.currentImageIndex--; 
+      $scope.currentImageIndex--;
     };
+
+    $scope.currentUrl = $location.absUrl();
 
     $scope.playSlideshow = function() {
       $scope.slideshowPlaying = true;

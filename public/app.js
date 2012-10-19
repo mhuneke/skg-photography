@@ -4,6 +4,8 @@
   var app = angular.module('app', ['app.controllers']);
 
   app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
+
     $routeProvider.when('/', {templateUrl: '/partials/home.html', controller: 'HomeCtrl'});
     $routeProvider.when('/collection/:id', {templateUrl: '/partials/view-collection.html', controller: 'CollectionCtrl'});
     $routeProvider.when('/collection/:id/:imageId', {templateUrl: '/partials/view-collection.html', controller: 'CollectionCtrl'});
