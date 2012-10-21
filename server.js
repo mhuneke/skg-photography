@@ -15,7 +15,8 @@ app.configure(function() {
   app.use(express['static'](path.join(__dirname, 'public')));
 });
 
-app.get('/', function(req, res) {
+// Don't need any explicit routes because every route ends at index, the angular app
+app.use(function(req, res){
   res.render('index');
 });
 

@@ -107,8 +107,10 @@
       if ($scope.currentImageIndex === 0) {
         return;
       }
-      $scope.currentImageIndex--; 
+      $scope.currentImageIndex--;
     };
+
+    $scope.currentUrl = $location.absUrl();
 
     $scope.playSlideshow = function() {
       $scope.slideshowPlaying = true;

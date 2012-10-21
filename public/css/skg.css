@@ -37,6 +37,23 @@ div.footer {
   margin-bottom: 10px;
 }
 
+#social-icons {
+  margin-top: 10px;
+}
+
+#social-icons a {
+  opacity: 0.3;
+  margin-left: 5px;
+}
+
+#social-icons a:hover {
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -webkit-transition: opacity .4s ease-in-out;
+}
+
 footer {
   color: #666;
   background: #222;
