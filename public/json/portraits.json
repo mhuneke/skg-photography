@@ -3,9 +3,19 @@
   "alias": "portraits",
   "photos": [
     {
-      "title": "Black Rock",
-      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Black Rock.jpg",
-      "image": "https://s3.amazonaws.com/skg-photography/portraits/Black Rock.jpg"
+      "title": "Violets are blue",
+      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Violets are blue.jpg",
+      "image": "https://s3.amazonaws.com/skg-photography/portraits/Violets are blue.jpg"
+    },
+    {
+      "title": "PDX",
+      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/PDX.jpg",
+      "image": "https://s3.amazonaws.com/skg-photography/portraits/PDX.jpg"
+    },
+    {
+      "title": "Frisco",
+      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Frisco.jpg",
+      "image": "https://s3.amazonaws.com/skg-photography/portraits/Frisco.jpg"
     },
     {
       "title": "Chapeau",
@@ -13,14 +23,19 @@
       "image": "https://s3.amazonaws.com/skg-photography/portraits/Chapeau.jpg"
     },
     {
+      "title": "Orlène",
+      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Orlene (2).jpg",
+      "image": "https://s3.amazonaws.com/skg-photography/portraits/Orlene (2).jpg"
+    },
+    {
+      "title": "Orlène",
+      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Orlène.jpg",
+      "image": "https://s3.amazonaws.com/skg-photography/portraits/Orlène.jpg"
+    },
+    {
       "title": "Clémentine",
       "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Clementine.jpg",
       "image": "https://s3.amazonaws.com/skg-photography/portraits/Clementine.jpg"
-    },
-    {
-      "title": "La Joyeuse",
-      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/La Joyeuse.jpg",
-      "image": "https://s3.amazonaws.com/skg-photography/portraits/La Joyeuse.jpg"
     },
     {
       "title": "Lindsay",
@@ -28,29 +43,9 @@
       "image": "https://s3.amazonaws.com/skg-photography/portraits/Lindsay.jpg"
     },
     {
-      "title": "Madrileñas",
-      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Madrilenas.jpg",
-      "image": "https://s3.amazonaws.com/skg-photography/portraits/Madrilenas.jpg"
-    },
-    {
-      "title": "Orlène",
-      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Orlene (2).jpg",
-      "image": "https://s3.amazonaws.com/skg-photography/portraits/Orlene (2).jpg"
-    },
-    {
-      "title": "Poolesville",
-      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Poolesville.jpg",
-      "image": "https://s3.amazonaws.com/skg-photography/portraits/Poolesville.jpg"
-    },
-    {
-      "title": "S & B",
-      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/S & B.jpg",
-      "image": "https://s3.amazonaws.com/skg-photography/portraits/S & B.jpg"
-    },
-    {
-      "title": "Violets are blue",
-      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Violets are blue.jpg",
-      "image": "https://s3.amazonaws.com/skg-photography/portraits/Violets are blue.jpg"
+      "title": "Pride",
+      "thumbnail": "https://s3.amazonaws.com/skg-photography/portraits/thumbs/Pride.jpg",
+      "image": "https://s3.amazonaws.com/skg-photography/portraits/Pride.jpg"
     }
   ]
 }

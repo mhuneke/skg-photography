@@ -4,6 +4,21 @@ body,html{
 
 body {
   background: url('https://s3.amazonaws.com/skg-photography/polaroid.png');
+  font-family: 'Raleway', cursive;
+}
+
+.header-well {
+  width: 100px;
+  opacity: 0.9;
+}
+
+#logo-text {
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg);
+}
+
+a {
+  color: navy;
 }
 
 body #container .wrapper {
