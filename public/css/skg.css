@@ -5,6 +5,7 @@ body,html{
 body {
   background: url('https://s3.amazonaws.com/skg-photography/polaroid.png');
   font-family: 'Raleway', cursive;
+  color: navy;
 }
 
 .header-well {

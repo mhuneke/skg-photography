@@ -55,6 +55,10 @@
     });
   }]);
 
+  controllers.controller('CollectionIntroCtrl', ['$scope', '$log', '$http', '$routeParams', function($scope, $log, $http, $routeParams) {
+
+  }]);
+
   controllers.controller('CollectionCtrl', ['$scope', '$routeParams', '$log', '$http', '$location', function($scope, $routeParams, $log, $http, $location) {
     $log.log($routeParams);
 
@@ -64,10 +68,12 @@
       
       var createImage = function() {
         $container.empty();
+        $("#social-icons").toggle();
         var $img = $('<img />')
           .css("display", "none")
           .bind('load', function (e) {
             $img.fadeIn('fast');
+            $("#social-icons").toggle();
           })
           .appendTo($container);
 
