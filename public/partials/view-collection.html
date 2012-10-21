@@ -1,4 +1,4 @@
-<h4 ng-cloak>{{currentImageTitle}}</h4>
+<h4 class="uppercase" ng-cloak>{{currentImageTitle}}</h4>
 
 <div id="preview-image-container">
   
@@ -17,13 +17,13 @@
 
 <footer>
   <div class="container">
-    <a ng-click="previousImage();" ng-disabled="currentImageIndex == 0"><i class="icon-arrow-left icon-white"></i> Previous</a>
-    <span ng-cloak style="padding-left: 10px; padding-right: 10px;">{{currentImageIndex + 1}} of {{photoUrls.length}}</span>
-    <a ng-disabled="currentImageIndex == photoUrls.length - 1" ng-click="nextImage();">Next <i class="icon-arrow-right icon-white"></i></a>
+    <a class="uppercase" ng-click="previousImage();" ng-disabled="currentImageIndex == 0"><i class="icon-arrow-left icon-white"></i> Previous</a>
+    <span class="uppercase" ng-cloak style="padding-left: 10px; padding-right: 10px;">{{currentImageIndex + 1}} of {{photoUrls.length}}</span>
+    <a class="uppercase" ng-disabled="currentImageIndex == photoUrls.length - 1" ng-click="nextImage();">Next <i class="icon-arrow-right icon-white"></i></a>
   </div>
 
   <div class="container">
-    <a ng-click="playSlideshow();" ng-hide="slideshowPlaying"><i class="icon-play icon-white"></i> Play</a>
-    <a ng-click="pauseSlideshow();" ng-hide="!slideshowPlaying" ><i class="icon-pause icon-white"></i> Pause</a>
+    <a class="uppercase"ng-click="playSlideshow();" ng-hide="slideshowPlaying"><i class="icon-play icon-white"></i> Play</a>
+    <a class="uppercase" ng-click="pauseSlideshow();" ng-hide="!slideshowPlaying" ><i class="icon-pause icon-white"></i> Pause</a>
   </div>
 </footer>
